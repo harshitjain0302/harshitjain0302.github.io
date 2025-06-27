@@ -1,0 +1,133 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Harshit Jain | Portfolio</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    html {
+      scroll-padding-top: 100px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="nav-container header-edge-align">
+      <div class="logo">
+        <img src="assets/images/Profile Picture.jpg" alt="Harshit Jain" class="profile-pic">
+        <h1 class="logo-name">Harshit Jain</h1>
+      </div>
+      <nav>
+        <a href="#home" class="active">Introduction</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#education">Education</a>
+        <a href="resume.html">Resume</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container home" id="home">
+    <section class="intro-card">
+      <h2>Hi! I’m Harshit.</h2>
+      <p>I’m currently pursuing my Master’s in Data Science at Indiana University Bloomington. With a strong background in both data engineering and machine learning, I love transforming complex datasets into clear, actionable insights that drive decisions. My work spans predictive modeling, cloud analytics, and end-to-end data pipeline development.</p>
+      <p>I’ve gained hands-on experience through internships and academic projects where I built scalable systems on cloud platforms like Google Cloud and AWS. Whether it's automating workflows with serverless functions, analyzing user behavior, or designing interactive dashboards, I bring a full-stack mindset to data problems.</p>
+      <p>As a lifelong learner, I’m passionate about continuous growth, solving impactful problems, and collaborating across domains to create meaningful solutions. Welcome to my portfolio — I hope you enjoy exploring it!</p>
+      <div class="tagline">“Exploring data, building insights, and securing AI—one project at a time.”</div>
+    </section>
+
+    <section id="skills">
+      <h2>Skills</h2>
+      <ul>
+        <li><strong>Languages:</strong> Python (Pandas, NumPy, Scikit-learn), R, SQL</li>
+        <li><strong>ML/AI:</strong> Supervised & Unsupervised Learning, Deep Learning, NLP, LLMs (Transformers)</li>
+        <li><strong>Visualization:</strong> Tableau, Power BI, Looker Studio</li>
+        <li><strong>Cloud & Big Data:</strong> GCP (BigQuery, Dataflow), AWS (S3, Lambda), Databricks</li>
+        <li><strong>Data Tasks:</strong> ETL, Feature Engineering, A/B Testing, Time Series Analysis</li>
+      </ul>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="card project-entry">
+        <div class="project-grid">
+          <div class="project-image">
+            <img src="assets/images/project1.jpg" alt="Cardiovascular Dashboard">
+          </div>
+          <div class="project-info">
+            <h3>Cardiovascular Health Analysis Dashboard</h3>
+            <p>Built an interactive dashboard on GCP using BigQuery and Looker Studio to explore 68K+ health records. Identified risk factors using SQL aggregations, segmentation filters, and visual storytelling for stakeholder insights.</p>
+            <p><strong>Tools:</strong> BigQuery, Looker Studio, SQL, Python</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="card project-entry">
+        <div class="project-grid">
+          <div class="project-image">
+            <img src="assets/images/project2.jpg" alt="Image Analysis Project">
+          </div>
+          <div class="project-info">
+            <h3>Neural Network-Based Image Analysis</h3>
+            <p>Analyzed high-dimensional image data using PCA, t-SNE, and clustering methods like K-Means and EM. Used Procrustes alignment to compare learned representations with human annotations and improve model interpretability.</p>
+            <p><strong>Tools:</strong> Python, Scikit-learn, Matplotlib</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience">
+      <h2>Experience</h2>
+      <div class="card">
+        <h3>Graduate Researcher – Data Science and AI Lab (DSAIL), Indiana University Bloomington</h3>
+        <ul>
+          <li>Collaborating with PhD and MS researchers to integrate large-scale cybersecurity datasets (e.g., Hugging Face model metadata) into a research-grade interactive dashboard using SQL and Python.</li>
+        </ul>
+        <p><strong>Keywords:</strong> Machine Learning, Data Engineering, BigQuery, Customer Segmentation, Cloud Automation</p>
+      </div>
+      <div class="card">
+        <h3>Machine Learning Intern – Feynn Labs</h3>
+        <ul>
+          <li>Built Python-based data pipelines for data extraction, preprocessing, and transformation from structured data sources.</li>
+          <li>Automated ETL workflows using Google Cloud Platform tools (BigQuery, Cloud Functions), improving data pipeline efficiency and scalability.</li>
+          <li>Developed machine learning models to support customer segmentation, enabling more personalized marketing strategies.</li>
+        </ul>
+        <p><strong>Keywords:</strong> Machine Learning, Data Engineering, BigQuery, Customer Segmentation, Cloud Automation</p>
+      </div>
+      <div class="card">
+        <h3>Python Development Intern – Hackveda</h3>
+        <ul>
+          <li>Designed and automated ETL pipelines using Python and SQL, streamlining data integration across multiple sources.</li>
+          <li>Built and deployed AWS Lambda functions to support event-driven data processing and reduce manual overhead.</li>
+          <li>Implemented validation checks and logging mechanisms to enhance the reliability and robustness of internal data workflows.</li>
+        </ul>
+        <p><strong>Keywords:</strong> Python, AWS Lambda, ETL, SQL, Automation, Cloud Development</p>
+      </div>
+    </section>
+
+    <section id="education">
+      <h2>Education</h2>
+      <div class="card">
+        <h3>Indiana University Bloomington</h3>
+        <p>Master of Science in Data Science (2024 – 2026)<br>GPA: 3.73/4.0</p>
+        <p><strong>Relevant Coursework:</strong> Introduction to Statistics, Applied Machine Learning, Applied Algorithms, Data Mining, Applied Database Technologies, Management Access & Use of Big Data</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-content">
+      <div class="footer-icons">
+        <a href="mailto:jainharshitanil@gmail.com"><i class="fa fa-envelope"></i></a>
+        <a href="https://github.com/harshitjain0302" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://linkedin.com/in/harshitaniljain" target="_blank"><i class="fab fa-linkedin"></i></a>
+      </div>
+      <p class="footer-note">Thank you for visiting my portfolio! Feel free to connect or reach out.</p>
+    </div>
+  </footer>
+</body>
+</html>
