@@ -1,0 +1,64 @@
+<!-- resume.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resume | Harshit Jain</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    .resume-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      margin-top: 40px;
+    }
+    .resume-container iframe {
+      width: 70vw;
+      height: 90vh;
+      border: none;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="nav-container header-edge-align">
+      <div class="logo">
+        <img src="assets/images/Profile Picture.jpg" alt="Harshit Jain" class="profile-pic">
+        <h1 class="logo-name">Harshit Jain</h1>
+      </div>
+      <nav>
+        <a href="index.html">Introduction</a>
+        <a href="index.html#skills">Skills</a>
+        <a href="index.html#projects">Projects</a>
+        <a href="index.html#experience">Experience</a>
+        <a href="index.html#education">Education</a>
+        <a href="resume.html" class="active">Resume</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="resume-container">
+      <h2>Resume</h2>
+      <p>You can view and download my resume below:</p>
+      <a href="./assets/resume.pdf" class="cta-button" download>📄 Download Resume (PDF)</a>
+      <iframe src="./assets/resume.pdf" title="Resume PDF Preview"></iframe>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-content">
+      <div class="footer-icons">
+        <a href="mailto:jainharshitanil@gmail.com"><i class="fa fa-envelope"></i></a>
+        <a href="https://github.com/harshitjain0302" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://linkedin.com/in/harshitaniljain" target="_blank"><i class="fab fa-linkedin"></i></a>
+      </div>
+      <p class="footer-note">Thank you for visiting my portfolio! Feel free to connect or reach out.</p>
+    </div>
+  </footer>
+</body>
+</html>
