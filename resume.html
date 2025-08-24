@@ -8,54 +8,93 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <style>
-    .resume-container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      margin-top: 40px;
+  .resume-section {
+    padding: 60px 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .resume-section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: var(--accent);
+  }
+
+  .resume-buttons {
+    margin-bottom: 20px;
+  }
+
+  .resume-buttons .btn {
+    margin: 0 10px;
+  }
+
+  .resume-preview {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  }
+
+  .resume-preview iframe {
+    width: 100%;
+    height: 80vh;
+    max-height: 1000px;
+    border: none;
+  }
+
+  /* 🔹 Responsive adjustments */
+  @media (max-width: 768px) {
+    .resume-preview iframe {
+      height: 60vh;
     }
-    .resume-container iframe {
-      width: 70vw;
-      height: 90vh;
-      border: none;
-      margin-top: 30px;
+  }
+
+  @media (max-width: 480px) {
+    .resume-preview iframe {
+      height: 50vh;
     }
+  }
   </style>
 </head>
 <body>
-  <header>
-    <div class="nav-container header-edge-align">
-      <div class="logo">
-        <img src="assets/images/Profile Picture.jpg" alt="Harshit Jain" class="profile-pic">
-        <h1 class="logo-name">Harshit Jain</h1>
-      </div>
-      <nav>
-        <a href="index.html">Introduction</a>
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="nav-edge">
+      <a href="index.html" class="brand">
+        <span class="brand-name">Harshit Jain</span>
+      </a>
+
+      <nav class="main-nav">
         <a href="index.html#skills">Skills</a>
         <a href="index.html#projects">Projects</a>
         <a href="index.html#experience">Experience</a>
         <a href="index.html#education">Education</a>
-        <a href="resume.html" class="active">Resume</a>
       </nav>
     </div>
   </header>
 
-  <main class="container">
-    <section class="resume-container">
-      <h2>Resume</h2>
-      <p>You can view and download my resume below:</p>
-      <a href="./assets/resume.pdf" class="cta-button" download>📄 Download Resume (PDF)</a>
-      <iframe src="./assets/resume.pdf" title="Resume PDF Preview"></iframe>
-    </section>
-  </main>
+  <!-- RESUME -->
+  <section class="resume-section">
+    <h2>My Resume</h2>
+    <div class="resume-buttons">
+      <a href="assets/resume.pdf" download class="btn primary"><i class="fas fa-download"></i> Download Resume</a>
+      <a href="assets/resume.pdf" target="_blank" class="btn"><i class="fas fa-external-link-alt"></i> Open in New Tab</a>
+    </div>
 
-  <footer>
-    <div class="container footer-content">
+    <div class="resume-preview">
+      <iframe src="assets/resume.pdf"></iframe>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-content">
       <div class="footer-icons">
-        <a href="mailto:jainharshitanil@gmail.com"><i class="fa fa-envelope"></i></a>
+        <a href="mailto:your.email@example.com" target="_blank"><i class="fas fa-envelope"></i></a>
+        <a href="https://www.linkedin.com/in/harshitaniljain/" target="_blank"><i class="fab fa-linkedin"></i></a>
         <a href="https://github.com/harshitjain0302" target="_blank"><i class="fab fa-github"></i></a>
-        <a href="https://linkedin.com/in/harshitaniljain" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="resume.html" target="_blank"><i class="fas fa-file-alt"></i></a>
       </div>
       <p class="footer-note">Thank you for visiting my portfolio! Feel free to connect or reach out.</p>
     </div>
