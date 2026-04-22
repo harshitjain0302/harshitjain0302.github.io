@@ -1,64 +1,193 @@
-<!-- resume.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Resume | Harshit Jain</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Shared styles -->
   <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
   <style>
-    .resume-container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      margin-top: 40px;
+    /* ── Resume page specific ── */
+    .resume-page {
+      min-height: 100vh;
+      padding: 110px 28px 80px;
     }
-    .resume-container iframe {
-      width: 70vw;
-      height: 90vh;
+
+    .resume-inner {
+      max-width: 960px;
+      margin: 0 auto;
+    }
+
+    .resume-header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .resume-header h1 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--text-bright);
+      margin-bottom: 8px;
+    }
+
+    .resume-header p {
+      color: var(--muted);
+      font-size: 0.95rem;
+      margin-bottom: 28px;
+    }
+
+    .resume-btn-group {
+      display: flex;
+      justify-content: center;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-bottom: 40px;
+    }
+
+    .resume-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 11px 22px;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 0.92rem;
+      transition: opacity 0.25s, transform 0.25s;
+    }
+    .resume-btn.primary {
+      background: var(--accent);
+      color: var(--bg);
+    }
+    .resume-btn.primary:hover { opacity: 0.88; transform: translateY(-2px); }
+
+    .resume-btn.outline {
+      border: 1px solid var(--border);
+      color: var(--text);
+    }
+    .resume-btn.outline:hover { border-color: var(--accent); color: var(--accent); }
+
+    .resume-preview-box {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      overflow: hidden;
+    }
+
+    .resume-preview-box iframe {
+      display: block;
+      width: 100%;
+      height: 82vh;
+      max-height: 1080px;
       border: none;
-      margin-top: 30px;
+    }
+
+    @media (max-width: 768px) {
+      .resume-preview-box iframe { height: 62vh; }
+    }
+    @media (max-width: 480px) {
+      .resume-preview-box iframe { height: 52vh; }
     }
   </style>
 </head>
 <body>
-  <header>
-    <div class="nav-container header-edge-align">
-      <div class="logo">
-        <img src="assets/images/Profile Picture.jpg" alt="Harshit Jain" class="profile-pic">
-        <h1 class="logo-name">Harshit Jain</h1>
-      </div>
-      <nav>
-        <a href="index.html">Introduction</a>
-        <a href="index.html#skills">Skills</a>
-        <a href="index.html#projects">Projects</a>
-        <a href="index.html#experience">Experience</a>
-        <a href="index.html#education">Education</a>
-        <a href="resume.html" class="active">Resume</a>
-      </nav>
+
+  <!-- ── NAV ── -->
+  <header id="site-header" class="scrolled">
+    <nav class="nav-container">
+      <a href="index.html" class="nav-brand">HJ</a>
+
+      <ul class="nav-links">
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#skills">Skills</a></li>
+        <li><a href="index.html#projects">Projects</a></li>
+        <li><a href="index.html#experience">Experience</a></li>
+        <li><a href="index.html#education">Education</a></li>
+        <li><a href="index.html#publications">Research</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+
+      <a href="assets/resume.pdf" download class="nav-resume-btn">
+        Download <i class="fas fa-download"></i>
+      </a>
+
+      <button class="hamburger" id="hamburger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+
+    <div class="mobile-menu" id="mobile-menu">
+      <a href="index.html#about">About</a>
+      <a href="index.html#skills">Skills</a>
+      <a href="index.html#projects">Projects</a>
+      <a href="index.html#experience">Experience</a>
+      <a href="index.html#education">Education</a>
+      <a href="index.html#publications">Research</a>
+      <a href="index.html#contact">Contact</a>
     </div>
   </header>
 
-  <main class="container">
-    <section class="resume-container">
-      <h2>Resume</h2>
-      <p>You can view and download my resume below:</p>
-      <a href="./assets/resume.pdf" class="cta-button" download>📄 Download Resume (PDF)</a>
-      <iframe src="./assets/resume.pdf" title="Resume PDF Preview"></iframe>
-    </section>
+  <!-- ── RESUME PAGE ── -->
+  <main class="resume-page">
+    <div class="resume-inner">
+
+      <div class="resume-header">
+        <div class="section-label">Resume</div>
+        <h1>Harshit Jain</h1>
+        <p>Data Scientist · ML Engineer · Indiana University Bloomington (MS, 2026)</p>
+
+        <div class="resume-btn-group">
+          <a href="assets/resume.pdf" download class="resume-btn primary">
+            <i class="fas fa-download"></i> Download PDF
+          </a>
+          <a href="assets/resume.pdf" target="_blank" rel="noopener" class="resume-btn outline">
+            <i class="fas fa-external-link-alt"></i> Open in New Tab
+          </a>
+          <a href="index.html" class="resume-btn outline">
+            <i class="fas fa-arrow-left"></i> Back to Portfolio
+          </a>
+        </div>
+      </div>
+
+      <div class="resume-preview-box">
+        <iframe src="assets/resume.pdf" title="Harshit Jain Resume"></iframe>
+      </div>
+
+    </div>
   </main>
 
-  <footer>
-    <div class="container footer-content">
-      <div class="footer-icons">
-        <a href="mailto:jainharshitanil@gmail.com"><i class="fa fa-envelope"></i></a>
-        <a href="https://github.com/harshitjain0302" target="_blank"><i class="fab fa-github"></i></a>
-        <a href="https://linkedin.com/in/harshitaniljain" target="_blank"><i class="fab fa-linkedin"></i></a>
-      </div>
-      <p class="footer-note">Thank you for visiting my portfolio! Feel free to connect or reach out.</p>
+  <!-- ── FOOTER ── -->
+  <footer class="footer">
+    <div class="container">
+      <p>Designed &amp; Built by <span>Harshit Jain</span></p>
+      <p class="footer-sub">Indiana University Bloomington · MS Data Science · 2026</p>
     </div>
   </footer>
+
+  <script>
+    /* Header scroll shrink */
+    const header = document.getElementById('site-header');
+    window.addEventListener('scroll', () => {
+      header.classList.toggle('scrolled', window.scrollY > 10);
+    }, { passive: true });
+
+    /* Mobile menu */
+    const hamburger  = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobile-menu');
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('open');
+      mobileMenu.classList.toggle('open');
+    });
+  </script>
 </body>
 </html>
