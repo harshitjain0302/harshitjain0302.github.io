@@ -20,6 +20,7 @@ button { cursor: pointer; border: none; background: none; }
   --accent-glow:   rgba(88, 166, 255, 0.12);
   --accent-2:      #79c0ff;
   --green:         #3fb950;
+  --yellow:        #e3b341;
   --text:          #c9d1d9;
   --text-bright:   #e6edf3;
   --muted:         #8b949e;
@@ -901,6 +902,20 @@ body {
   color: var(--green);
   border: 1px solid rgba(63, 185, 80, 0.28);
 }
+.pub-doi {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.78rem;
+  color: var(--accent);
+  padding: 3px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(88, 166, 255, 0.25);
+  font-family: var(--mono);
+  transition: background var(--transition);
+}
+.pub-doi:hover { background: var(--accent-glow); }
+
 .pub-authors, .pub-year {
   font-size: 0.8rem;
   color: var(--muted);

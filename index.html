@@ -76,10 +76,10 @@
         </div>
 
         <p class="hero-bio">
-          Data Scientist pursuing my MS at Indiana University Bloomington. I design and ship ML
-          systems, scalable data pipelines, and research analytics - from population-scale health
-          studies to model supply chain security, agentic AI vulnerability research, and large-scale
-          open-source ecosystem analysis across millions of models.
+          Data Scientist with an MS in Data Science from Indiana University Bloomington (GPA 3.82).
+          I design and ship ML systems, scalable data pipelines, and research analytics - from
+          population-scale health studies to model supply chain security, agentic AI vulnerability
+          research, and large-scale open-source ecosystem analysis across millions of models.
         </p>
 
         <!-- CTAs -->
@@ -216,6 +216,12 @@
             <span class="tag">BERT / NLP</span>
             <span class="tag">LoRA / Fine-tuning</span>
             <span class="tag">LLM / RAG</span>
+            <span class="tag">LangGraph</span>
+            <span class="tag">RAGAS</span>
+            <span class="tag">BGE-M3</span>
+            <span class="tag">TAPAS</span>
+            <span class="tag">Groq</span>
+            <span class="tag">MCP / FastMCP</span>
             <span class="tag">Computer Vision</span>
             <span class="tag">MLflow</span>
           </div>
@@ -229,12 +235,16 @@
           <div class="skill-tags">
             <span class="tag">Pandas</span>
             <span class="tag">NumPy</span>
+            <span class="tag">Polars</span>
             <span class="tag">Apache Spark</span>
+            <span class="tag">Airflow</span>
             <span class="tag">Docker</span>
             <span class="tag">AWS Lambda</span>
             <span class="tag">AWS S3</span>
             <span class="tag">Google BigQuery</span>
             <span class="tag">MySQL</span>
+            <span class="tag">PostgreSQL</span>
+            <span class="tag">FastAPI</span>
             <span class="tag">SLURM / HPC</span>
             <span class="tag">Git</span>
           </div>
@@ -250,6 +260,8 @@
             <span class="tag">Power BI</span>
             <span class="tag">Looker Studio</span>
             <span class="tag">Plotly / Dash</span>
+            <span class="tag">Streamlit</span>
+            <span class="tag">Gradio</span>
             <span class="tag">Matplotlib</span>
             <span class="tag">Seaborn</span>
             <span class="tag">Excel</span>
@@ -272,11 +284,40 @@
       <!-- ── Featured Projects ── -->
       <div class="projects-featured">
 
-        <!-- #1 -->
+        <!-- #1 MedSignal -->
         <div class="project-featured-card reveal">
           <div class="project-featured-content">
             <div class="project-featured-text">
               <div class="project-num">01 / FEATURED</div>
+              <h3>MedSignal — Clinical Trial Intelligence Agent</h3>
+              <p>
+                A 4-node LangGraph multi-agent RAG system for querying oncology clinical trial data, built
+                over 1,500 ClinicalTrials.gov Phase 2/3 trials. Hybrid retrieval combining BGE-M3 dense
+                embeddings (pgvector HNSW) with BM25 via Reciprocal Rank Fusion achieves
+                <strong>70% retrieval hit rate (+18pp over semantic-only baseline)</strong>, measured over
+                50 hand-curated queries. Integrates 6 distinct HuggingFace task types and custom FastMCP
+                servers wrapping ClinicalTrials.gov and PubMed APIs. Full pipeline achieves
+                <strong>100% intent accuracy</strong> on statistical queries evaluated with RAGAS.
+              </p>
+              <div class="project-tags">
+                <span>Python</span><span>LangGraph</span><span>BGE-M3</span><span>BM25</span>
+                <span>TAPAS</span><span>Groq</span><span>RAGAS</span><span>FastAPI</span>
+                <span>MCP / FastMCP</span><span>pgvector</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/harshitjain0302/medsignal" target="_blank" rel="noopener" class="project-link">
+                  <i class="fab fa-github"></i> GitHub
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- #2 -->
+        <div class="project-featured-card reveal">
+          <div class="project-featured-content">
+            <div class="project-featured-text">
+              <div class="project-num">02 / FEATURED</div>
               <h3>HuggingFace Model Intelligence System</h3>
               <p>
                 Fine-tuned Mistral 7B using LoRA on 500+ GPT-4 generated Q&amp;A pairs from HuggingFace
@@ -297,11 +338,11 @@
           </div>
         </div>
 
-        <!-- #2 -->
+        <!-- #3 -->
         <div class="project-featured-card reveal">
           <div class="project-featured-content">
             <div class="project-featured-text">
-              <div class="project-num">02 / FEATURED</div>
+              <div class="project-num">03 / FEATURED</div>
               <h3>Security Threat Intelligence Platform</h3>
               <p>
                 Architected a distributed Spark ML pipeline ingesting <strong>257K+ network security events</strong>
@@ -322,11 +363,11 @@
           </div>
         </div>
 
-        <!-- #3 -->
+        <!-- #4 -->
         <div class="project-featured-card reveal">
           <div class="project-featured-content">
             <div class="project-featured-text">
-              <div class="project-num">03 / FEATURED</div>
+              <div class="project-num">04 / FEATURED</div>
               <h3>Cardiovascular Health Analytics Dashboard</h3>
               <p>
                 Built a cloud-based analytics pipeline on Google BigQuery processing <strong>68K+ patient records</strong>.
@@ -350,9 +391,23 @@
 
       </div><!-- /projects-featured -->
 
+      </div><!-- /projects-featured -->
+
       <!-- ── Other Projects Grid ── -->
       <h3 class="other-projects-title">Other Notable Projects</h3>
       <div class="projects-grid">
+
+        <div class="project-card reveal">
+          <div class="project-card-header">
+            <i class="fas fa-dna"></i>
+            <div class="project-card-links"></div>
+          </div>
+          <h4>JUMP-CP Gene Explorer</h4>
+          <p>Interactive phenotypic drug discovery dashboard over the JUMP-Cell Painting dataset (115TB, 937K well records). Precomputed UMAP embeddings enable sub-second gene search across ~20,000 CRISPR and ORF perturbations, with live cell image retrieval and morphological profiling per gene.</p>
+          <div class="project-tags-sm">
+            <span>Python Dash</span><span>Polars</span><span>UMAP</span><span>Plotly</span><span>Parquet</span>
+          </div>
+        </div>
 
         <div class="project-card reveal">
           <div class="project-card-header">
@@ -450,16 +505,40 @@
 
       <div class="timeline">
 
+        <!-- 0 IUF -->
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <div>
+                <h3>Data Quality Associate</h3>
+                <span class="timeline-company">Indiana University Foundation</span>
+              </div>
+              <span class="timeline-date">Jul 2026 – Present</span>
+            </div>
+            <ul class="timeline-bullets">
+              <li>Owns SQL-driven data validation and CRM core data integrity for IU Foundation's alumni and donor database spanning <strong>806,000+ alumni worldwide</strong>, using Crimson (Blackbaud CRM).</li>
+              <li>Leads deduplication, batch loading, and constituent relationship maintenance workflows; audits records for recurring data quality issues and trends across the full alumni and fundraising dataset.</li>
+              <li>Developing AI-assisted audit processes and automated validation methods to replace manual review workflows, and leading SQL query modifications to improve data quality analysis at scale.</li>
+              <li>Partners with development officers and Advancement team to translate technical data issues into actionable process improvements, and builds cross-functional buy-in for system changes.</li>
+            </ul>
+            <div class="timeline-tags">
+              <span>SQL</span><span>Blackbaud / Crimson</span><span>Data Quality</span>
+              <span>Data Validation</span><span>Excel</span><span>CRM</span>
+            </div>
+          </div>
+        </div>
+
         <!-- 1 -->
         <div class="timeline-item reveal">
           <div class="timeline-dot"></div>
           <div class="timeline-card">
             <div class="timeline-header">
               <div>
-                <h3>Research Assistant, FADS</h3>
+                <h3>Research Assistant, Irsay Institute</h3>
                 <span class="timeline-company">Indiana University Bloomington</span>
               </div>
-              <span class="timeline-date">Jan 2026 – Present</span>
+              <span class="timeline-date">Jan 2026 – Jul 2026</span>
             </div>
             <ul class="timeline-bullets">
               <li>Deployed and validated three photo-age models (DEX VGG-16, MiVOLO transformer, and ArcFace Ridge Regression) across N=1,261 subjects; diagnosed and fixed a deduplication bug improving DEX MAE from <strong>8.49 to 8.25 years</strong>.</li>
@@ -483,7 +562,7 @@
                 <h3>Teaching Assistant, INFO-I535</h3>
                 <span class="timeline-company">Indiana University Bloomington</span>
               </div>
-              <span class="timeline-date">Aug 2025 – Present</span>
+              <span class="timeline-date">Aug 2025 – May 2026</span>
             </div>
             <ul class="timeline-bullets">
               <li>Supported <strong>70+ graduate students</strong> in SQL and NoSQL database design, query optimization, and data modeling concepts.</li>
@@ -504,7 +583,7 @@
                 <h3>Research Assistant, Data Science &amp; AI Lab</h3>
                 <span class="timeline-company">Kelley School of Business, Indiana University</span>
               </div>
-              <span class="timeline-date">Jun 2025 – Present</span>
+              <span class="timeline-date">Jun 2025 – Jul 2026</span>
             </div>
             <ul class="timeline-bullets">
               <li>Architected a production data pipeline on IU's Quartz HPC (SLURM) harvesting <strong>2.6M+ HuggingFace model cards</strong>, resolving 479,137 GitHub links, and running Semgrep vulnerability scans across 22,135 repos, completing <strong>17,000+ batch jobs in under 24 hours</strong>.</li>
@@ -529,7 +608,7 @@
           <div class="timeline-card">
             <div class="timeline-header">
               <div>
-                <h3>Machine Learning Intern</h3>
+                <h3>Machine Learning Engineer</h3>
                 <span class="timeline-company">Feynn Labs</span>
               </div>
               <span class="timeline-date">Jun 2023 – Aug 2023</span>
@@ -620,17 +699,20 @@
 
         <div class="pub-card reveal">
           <div class="pub-venue">PEARC 2026 · ACM Visualization Showcase</div>
-          <h3>Security Vulnerability Analysis Across the Open-Source ML Ecosystem</h3>
+          <h3>Visualizing Vulnerability Exposure in the AI Open-Source Software Ecosystem: An Interactive Monitoring Dashboard</h3>
           <p>
-            Extended abstract analyzing vulnerabilities across 2.6M+ HuggingFace model cards and 22,135 GitHub
-            repositories. Surfaced 707K+ vulnerabilities and computed blast radius metrics quantifying downstream
+            Extended abstract covering 2.6M+ HuggingFace model cards, 22,135 GitHub repositories,
+            and 707K+ vulnerabilities surfaced. Introduces blast radius metrics quantifying downstream
             model exposure risk, with up to 83,706 models exposed through a single vulnerable repository.
-            Submitted to the ACM PEARC 2026 Visualization Showcase.
+            Published in the ACM PEARC 2026 Visualization Showcase proceedings.
           </p>
           <div class="pub-meta">
-            <span class="pub-tag submitted">Submitted</span>
+            <span class="pub-tag published">Published</span>
             <span class="pub-authors">Harshit Jain et al.</span>
             <span class="pub-year">2026</span>
+            <a href="https://dl.acm.org/doi/10.1145/3785462.3815840" target="_blank" rel="noopener" class="pub-doi">
+              <i class="fas fa-external-link-alt"></i> ACM DL
+            </a>
           </div>
         </div>
 
@@ -662,8 +744,8 @@
       <div class="section-label">Contact</div>
       <h2 class="section-title">Let's Connect</h2>
       <p class="contact-sub">
-        I'm actively looking for full-time Data Science and ML Engineering roles starting Summer/Fall 2026.
-        Whether you have an opportunity, a question, or just want to talk data, my inbox is always open.
+        Open to data science research collaborations, ML engineering opportunities, and conversations
+        about interesting problems. My inbox is always open.
       </p>
       <a href="mailto:jainharshitanil@gmail.com" class="contact-email-btn">
         <i class="fas fa-paper-plane"></i> Say Hello
